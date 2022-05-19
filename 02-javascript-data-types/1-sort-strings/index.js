@@ -6,4 +6,15 @@
  */
 export function sortStrings(arr, param = 'asc') {
 
+  let collator = new Intl.Collator('ru', {sensitivity: 'case', caseFirst: 'upper'});
+
+  const newarr = [...arr].sort(function(a, b) {
+    return collator.compare(a, b);
+  });
+
+  if (param === 'desc') {
+    return newarr.reverse();
+  } else {
+    return newarr;
+  }
 }
