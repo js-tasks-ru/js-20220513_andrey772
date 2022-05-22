@@ -4,5 +4,9 @@
  * @returns {*[]} - the new array with uniq values
  */
 export function uniq(arr) {
-
+  if (arr) {
+    return arr.reduce((uniqItems, item) => uniqItems.indexOf(item) > -1 ? uniqItems : [...uniqItems, item], []);
+  } else {
+    return [];
+  }
 }
