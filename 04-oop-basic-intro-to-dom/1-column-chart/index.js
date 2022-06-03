@@ -17,9 +17,9 @@ export default class ColumnChart {
     this.render();
   }
 
-  get template() { 
+  get template() {
     return `
-      <div class="column-chart column-chart_loading" style="--chart-height: 50">
+      <div class="column-chart column-chart_loading" style="--chart-height: ${this.chartHeight}">
         <div class="column-chart__title">
           Total ${this.label}
           ${this.getLink()}
@@ -46,6 +46,7 @@ export default class ColumnChart {
       this.element.classList.remove("column-chart_loading");
     }
 
+    debugger;
     this.subElements = this.getSubElements();
   }
 
@@ -58,6 +59,7 @@ export default class ColumnChart {
       result[name] = subElement;
     }
 
+    debugger
     return result;
   }
 
@@ -77,7 +79,7 @@ export default class ColumnChart {
   }
 
   getLink() {
-    return this.link 
+    return this.link
       ? `<a class="column-chart__link" href="${this.link}">View all</a>`
       : "";
   }

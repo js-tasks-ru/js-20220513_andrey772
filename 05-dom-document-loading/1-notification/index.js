@@ -17,7 +17,7 @@ export default class NotificationMessage {
     this.render();
   }
 
-  get template() { 
+  get template() {
     return `
       <div class="notification ${this.type}" style="--value:${this.durationInSeconds}">
         <div class="timer"></div>
