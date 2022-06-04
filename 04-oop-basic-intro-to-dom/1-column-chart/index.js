@@ -46,7 +46,6 @@ export default class ColumnChart {
       this.element.classList.remove("column-chart_loading");
     }
 
-    debugger;
     this.subElements = this.getSubElements();
   }
 
@@ -59,7 +58,6 @@ export default class ColumnChart {
       result[name] = subElement;
     }
 
-    debugger
     return result;
   }
 
