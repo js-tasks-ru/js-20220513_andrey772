@@ -1,5 +1,5 @@
 export default class SortableTable {
-  elements;
+  element;
   subElements = {};
 
   constructor(headerConfig = [], data = []) {
@@ -130,6 +130,7 @@ export default class SortableTable {
   }
 
   remove() {
+    
     if (this.element) {
       this.element.remove();
     }
